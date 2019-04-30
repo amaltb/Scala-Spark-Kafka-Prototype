@@ -12,7 +12,10 @@ import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 
 import scala.util.parsing.json.JSON
 
-
+/**
+  * StructuredStreamProcessor app reads the raw csv supply & demand data from kafka and process them to generate
+  * intermediate json data, which is then written back to kafka.
+  */
 object StructuredStreamProcessor {
 
   private val log = LogFactory.getLogger("./log/consumer.log", Level.DEBUG)

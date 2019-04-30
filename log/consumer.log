@@ -3659,3 +3659,199 @@ Details: java.lang.RuntimeException: Could not write to kafka due to exception.
 [INFO] 2019-04-26 16:37:01,549 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560099
 [INFO] 2019-04-26 16:37:02,130 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560060
 [INFO] 2019-04-26 16:37:02,130 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560060
+[INFO] 2019-04-30 10:11:44,853 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:11:44,853 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[ERROR] 2019-04-30 10:11:44,860 applicationLogger run - Exiting application due to unknown exception: 
+Details: java.lang.RuntimeException: Could not write to kafka due to exception. 
+ Details: org.apache.spark.sql.AnalysisException: 'writeStream' can be called only on streaming Dataset/DataFrame;
+[ERROR] 2019-04-30 10:11:44,860 applicationLogger run - Exiting application due to unknown exception: 
+Details: java.lang.RuntimeException: Could not write to kafka due to exception. 
+ Details: org.apache.spark.sql.AnalysisException: 'writeStream' can be called only on streaming Dataset/DataFrame;
+[INFO] 2019-04-30 10:12:15,296 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:12:15,296 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:12:15,605 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:12:15,605 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:15:58,909 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:15:58,909 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:15:59,156 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:15:59,156 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:16:55,295 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:16:55,295 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:16:55,596 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:16:55,596 applicationLogger writeToKafkaStream - Persisting intermediary dataframe to kafka... 
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 12.824784826059727 lng: 77.47493075227194
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 12.824784826059727 lng: 77.47493075227194
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 12.824784826059727 lng: 77.47493075227194
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 13.147505532591783 lng: 77.6554762149914
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 13.147505532591783 lng: 77.6554762149914
+[INFO] 2019-04-30 10:16:57,627 applicationLogger lookupZipCode - Looking up zip code for lat: 13.147505532591783 lng: 77.6554762149914
+[INFO] 2019-04-30 10:16:57,629 applicationLogger apply - Zip code for lat: 12.824784826059727 lng: 77.47493075227194 is 560082
+[INFO] 2019-04-30 10:16:57,629 applicationLogger apply - Zip code for lat: 12.824784826059727 lng: 77.47493075227194 is 560082
+[INFO] 2019-04-30 10:16:57,629 applicationLogger apply - Zip code for lat: 12.824784826059727 lng: 77.47493075227194 is 560082
+[INFO] 2019-04-30 10:16:57,635 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.147505532591783 lng:77.6554762149914
+[INFO] 2019-04-30 10:16:57,635 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.147505532591783 lng:77.6554762149914
+[INFO] 2019-04-30 10:16:57,635 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.147505532591783 lng:77.6554762149914
+[INFO] 2019-04-30 10:16:57,658 applicationLogger lookupZipCode - Looking up zip code for lat: 13.125299371599796 lng: 77.5553493216845
+[INFO] 2019-04-30 10:16:57,658 applicationLogger lookupZipCode - Looking up zip code for lat: 13.125299371599796 lng: 77.5553493216845
+[INFO] 2019-04-30 10:16:57,658 applicationLogger lookupZipCode - Looking up zip code for lat: 13.125299371599796 lng: 77.5553493216845
+[INFO] 2019-04-30 10:16:57,658 applicationLogger apply - Zip code for lat: 13.125299371599796 lng: 77.5553493216845 is 560064
+[INFO] 2019-04-30 10:16:57,658 applicationLogger apply - Zip code for lat: 13.125299371599796 lng: 77.5553493216845 is 560064
+[INFO] 2019-04-30 10:16:57,658 applicationLogger apply - Zip code for lat: 13.125299371599796 lng: 77.5553493216845 is 560064
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 12.905480013748056 lng: 77.51861440837548
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 12.905480013748056 lng: 77.51861440837548
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 12.905480013748056 lng: 77.51861440837548
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 13.117264845162417 lng: 77.54349341326478
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 13.117264845162417 lng: 77.54349341326478
+[INFO] 2019-04-30 10:16:57,659 applicationLogger lookupZipCode - Looking up zip code for lat: 13.117264845162417 lng: 77.54349341326478
+[INFO] 2019-04-30 10:16:57,660 applicationLogger apply - Zip code for lat: 13.117264845162417 lng: 77.54349341326478 is 560064
+[INFO] 2019-04-30 10:16:57,660 applicationLogger apply - Zip code for lat: 13.117264845162417 lng: 77.54349341326478 is 560064
+[INFO] 2019-04-30 10:16:57,660 applicationLogger apply - Zip code for lat: 13.117264845162417 lng: 77.54349341326478 is 560064
+[INFO] 2019-04-30 10:16:57,660 applicationLogger lookupZipCode - Looking up zip code for lat: 13.102380097754304 lng: 77.57749184493204
+[INFO] 2019-04-30 10:16:57,660 applicationLogger lookupZipCode - Looking up zip code for lat: 13.102380097754304 lng: 77.57749184493204
+[INFO] 2019-04-30 10:16:57,660 applicationLogger lookupZipCode - Looking up zip code for lat: 13.102380097754304 lng: 77.57749184493204
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 12.905480013748056 lng: 77.51861440837548 is 560098
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 12.905480013748056 lng: 77.51861440837548 is 560098
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 12.905480013748056 lng: 77.51861440837548 is 560098
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 13.102380097754304 lng: 77.57749184493204 is 560064
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 13.102380097754304 lng: 77.57749184493204 is 560064
+[INFO] 2019-04-30 10:16:57,661 applicationLogger apply - Zip code for lat: 13.102380097754304 lng: 77.57749184493204 is 560064
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 13.020024833932792 lng: 77.63010977361617
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 13.020024833932792 lng: 77.63010977361617
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 13.020024833932792 lng: 77.63010977361617
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 12.943650412556151 lng: 77.60202170201148
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 12.943650412556151 lng: 77.60202170201148
+[INFO] 2019-04-30 10:16:57,662 applicationLogger lookupZipCode - Looking up zip code for lat: 12.943650412556151 lng: 77.60202170201148
+[INFO] 2019-04-30 10:16:57,662 applicationLogger apply - Zip code for lat: 13.020024833932792 lng: 77.63010977361617 is 560043
+[INFO] 2019-04-30 10:16:57,662 applicationLogger apply - Zip code for lat: 13.020024833932792 lng: 77.63010977361617 is 560043
+[INFO] 2019-04-30 10:16:57,662 applicationLogger apply - Zip code for lat: 13.020024833932792 lng: 77.63010977361617 is 560043
+[INFO] 2019-04-30 10:16:57,663 applicationLogger apply - Zip code for lat: 12.943650412556151 lng: 77.60202170201148 is 560030
+[INFO] 2019-04-30 10:16:57,663 applicationLogger apply - Zip code for lat: 12.943650412556151 lng: 77.60202170201148 is 560030
+[INFO] 2019-04-30 10:16:57,663 applicationLogger apply - Zip code for lat: 12.943650412556151 lng: 77.60202170201148 is 560030
+[INFO] 2019-04-30 10:16:57,663 applicationLogger lookupZipCode - Looking up zip code for lat: 12.77490017317503 lng: 77.45301287070718
+[INFO] 2019-04-30 10:16:57,663 applicationLogger lookupZipCode - Looking up zip code for lat: 12.77490017317503 lng: 77.45301287070718
+[INFO] 2019-04-30 10:16:57,663 applicationLogger lookupZipCode - Looking up zip code for lat: 12.77490017317503 lng: 77.45301287070718
+[INFO] 2019-04-30 10:16:57,664 applicationLogger lookupZipCode - Looking up zip code for lat: 13.100694807005203 lng: 77.425408904477
+[INFO] 2019-04-30 10:16:57,664 applicationLogger lookupZipCode - Looking up zip code for lat: 13.100694807005203 lng: 77.425408904477
+[INFO] 2019-04-30 10:16:57,664 applicationLogger lookupZipCode - Looking up zip code for lat: 13.100694807005203 lng: 77.425408904477
+[INFO] 2019-04-30 10:16:57,664 applicationLogger apply - Zip code for lat: 12.77490017317503 lng: 77.45301287070718 is 560082
+[INFO] 2019-04-30 10:16:57,664 applicationLogger apply - Zip code for lat: 12.77490017317503 lng: 77.45301287070718 is 560082
+[INFO] 2019-04-30 10:16:57,664 applicationLogger apply - Zip code for lat: 12.77490017317503 lng: 77.45301287070718 is 560082
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87685412233556 lng: 77.56567908433699
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87685412233556 lng: 77.56567908433699
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87685412233556 lng: 77.56567908433699
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.100694807005203 lng:77.425408904477
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.100694807005203 lng:77.425408904477
+[INFO] 2019-04-30 10:16:57,665 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.100694807005203 lng:77.425408904477
+[INFO] 2019-04-30 10:16:57,665 applicationLogger apply - Zip code for lat: 12.87685412233556 lng: 77.56567908433699 is 560076
+[INFO] 2019-04-30 10:16:57,665 applicationLogger apply - Zip code for lat: 12.87685412233556 lng: 77.56567908433699 is 560076
+[INFO] 2019-04-30 10:16:57,665 applicationLogger apply - Zip code for lat: 12.87685412233556 lng: 77.56567908433699 is 560076
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 13.058334776020542 lng: 77.43548872046998
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 13.058334776020542 lng: 77.43548872046998
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 13.058334776020542 lng: 77.43548872046998
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 12.938550129340396 lng: 77.48601094330483
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 12.938550129340396 lng: 77.48601094330483
+[INFO] 2019-04-30 10:16:57,666 applicationLogger lookupZipCode - Looking up zip code for lat: 12.938550129340396 lng: 77.48601094330483
+[INFO] 2019-04-30 10:16:57,667 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.058334776020542 lng:77.43548872046998
+[INFO] 2019-04-30 10:16:57,667 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.058334776020542 lng:77.43548872046998
+[INFO] 2019-04-30 10:16:57,667 applicationLogger lookupZipCode - Unable to lookup zip code for given lat:13.058334776020542 lng:77.43548872046998
+[INFO] 2019-04-30 10:16:57,668 applicationLogger lookupZipCode - Looking up zip code for lat: 12.791092153022117 lng: 77.7422359581099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger lookupZipCode - Looking up zip code for lat: 12.791092153022117 lng: 77.7422359581099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger lookupZipCode - Looking up zip code for lat: 12.791092153022117 lng: 77.7422359581099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.791092153022117 lng: 77.7422359581099 is 560099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.791092153022117 lng: 77.7422359581099 is 560099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.791092153022117 lng: 77.7422359581099 is 560099
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.938550129340396 lng: 77.48601094330483 is 560060
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.938550129340396 lng: 77.48601094330483 is 560060
+[INFO] 2019-04-30 10:16:57,668 applicationLogger apply - Zip code for lat: 12.938550129340396 lng: 77.48601094330483 is 560060
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.99841391468607 lng: 77.64756186694595
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.99841391468607 lng: 77.64756186694595
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.99841391468607 lng: 77.64756186694595
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.84137804210166 lng: 77.75108273335167
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.84137804210166 lng: 77.75108273335167
+[INFO] 2019-04-30 10:16:57,669 applicationLogger lookupZipCode - Looking up zip code for lat: 12.84137804210166 lng: 77.75108273335167
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.99841391468607 lng: 77.64756186694595 is 560033
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.99841391468607 lng: 77.64756186694595 is 560033
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.99841391468607 lng: 77.64756186694595 is 560033
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.84137804210166 lng: 77.75108273335167 is 560099
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.84137804210166 lng: 77.75108273335167 is 560099
+[INFO] 2019-04-30 10:16:57,670 applicationLogger apply - Zip code for lat: 12.84137804210166 lng: 77.75108273335167 is 560099
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.98783015694181 lng: 77.66163092940995
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.98783015694181 lng: 77.66163092940995
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.98783015694181 lng: 77.66163092940995
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87335985681732 lng: 77.61319554063714
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87335985681732 lng: 77.61319554063714
+[INFO] 2019-04-30 10:16:57,671 applicationLogger lookupZipCode - Looking up zip code for lat: 12.87335985681732 lng: 77.61319554063714
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.98783015694181 lng: 77.66163092940995 is 560016
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.98783015694181 lng: 77.66163092940995 is 560016
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.98783015694181 lng: 77.66163092940995 is 560016
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.87335985681732 lng: 77.61319554063714 is 560076
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.87335985681732 lng: 77.61319554063714 is 560076
+[INFO] 2019-04-30 10:16:57,671 applicationLogger apply - Zip code for lat: 12.87335985681732 lng: 77.61319554063714 is 560076
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 12.9830857139792 lng: 77.61067711646548
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 12.9830857139792 lng: 77.61067711646548
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 12.9830857139792 lng: 77.61067711646548
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 13.101907895482018 lng: 77.52425356435597
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 13.101907895482018 lng: 77.52425356435597
+[INFO] 2019-04-30 10:16:57,672 applicationLogger lookupZipCode - Looking up zip code for lat: 13.101907895482018 lng: 77.52425356435597
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 12.9830857139792 lng: 77.61067711646548 is 560001
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 12.9830857139792 lng: 77.61067711646548 is 560001
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 12.9830857139792 lng: 77.61067711646548 is 560001
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 13.101907895482018 lng: 77.52425356435597 is 560088
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 13.101907895482018 lng: 77.52425356435597 is 560088
+[INFO] 2019-04-30 10:16:57,672 applicationLogger apply - Zip code for lat: 13.101907895482018 lng: 77.52425356435597 is 560088
+[INFO] 2019-04-30 10:16:57,673 applicationLogger lookupZipCode - Looking up zip code for lat: 12.929656736279329 lng: 77.71234971843957
+[INFO] 2019-04-30 10:16:57,673 applicationLogger lookupZipCode - Looking up zip code for lat: 12.929656736279329 lng: 77.71234971843957
+[INFO] 2019-04-30 10:16:57,673 applicationLogger lookupZipCode - Looking up zip code for lat: 12.929656736279329 lng: 77.71234971843957
+[INFO] 2019-04-30 10:16:57,674 applicationLogger lookupZipCode - Looking up zip code for lat: 12.999028457439325 lng: 77.76129763767274
+[INFO] 2019-04-30 10:16:57,674 applicationLogger lookupZipCode - Looking up zip code for lat: 12.999028457439325 lng: 77.76129763767274
+[INFO] 2019-04-30 10:16:57,674 applicationLogger lookupZipCode - Looking up zip code for lat: 12.999028457439325 lng: 77.76129763767274
+[INFO] 2019-04-30 10:16:57,674 applicationLogger apply - Zip code for lat: 12.929656736279329 lng: 77.71234971843957 is 560087
+[INFO] 2019-04-30 10:16:57,674 applicationLogger apply - Zip code for lat: 12.929656736279329 lng: 77.71234971843957 is 560087
+[INFO] 2019-04-30 10:16:57,674 applicationLogger apply - Zip code for lat: 12.929656736279329 lng: 77.71234971843957 is 560087
+[INFO] 2019-04-30 10:16:57,675 applicationLogger apply - Zip code for lat: 12.999028457439325 lng: 77.76129763767274 is 560067
+[INFO] 2019-04-30 10:16:57,675 applicationLogger apply - Zip code for lat: 12.999028457439325 lng: 77.76129763767274 is 560067
+[INFO] 2019-04-30 10:16:57,675 applicationLogger apply - Zip code for lat: 12.999028457439325 lng: 77.76129763767274 is 560067
+[INFO] 2019-04-30 10:16:57,675 applicationLogger lookupZipCode - Looking up zip code for lat: 12.870509780655334 lng: 77.43653228183207
+[INFO] 2019-04-30 10:16:57,675 applicationLogger lookupZipCode - Looking up zip code for lat: 12.870509780655334 lng: 77.43653228183207
+[INFO] 2019-04-30 10:16:57,675 applicationLogger lookupZipCode - Looking up zip code for lat: 12.870509780655334 lng: 77.43653228183207
+[INFO] 2019-04-30 10:16:57,676 applicationLogger lookupZipCode - Looking up zip code for lat: 13.08234836667032 lng: 77.58776295006852
+[INFO] 2019-04-30 10:16:57,676 applicationLogger lookupZipCode - Looking up zip code for lat: 13.08234836667032 lng: 77.58776295006852
+[INFO] 2019-04-30 10:16:57,676 applicationLogger lookupZipCode - Looking up zip code for lat: 13.08234836667032 lng: 77.58776295006852
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 12.870509780655334 lng: 77.43653228183207 is 560060
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 12.870509780655334 lng: 77.43653228183207 is 560060
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 12.870509780655334 lng: 77.43653228183207 is 560060
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 13.08234836667032 lng: 77.58776295006852 is 560064
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 13.08234836667032 lng: 77.58776295006852 is 560064
+[INFO] 2019-04-30 10:16:57,676 applicationLogger apply - Zip code for lat: 13.08234836667032 lng: 77.58776295006852 is 560064
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.80219101303356 lng: 77.52793291088771
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.80219101303356 lng: 77.52793291088771
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.80219101303356 lng: 77.52793291088771
+[INFO] 2019-04-30 10:16:57,677 applicationLogger apply - Zip code for lat: 12.80219101303356 lng: 77.52793291088771 is 560082
+[INFO] 2019-04-30 10:16:57,677 applicationLogger apply - Zip code for lat: 12.80219101303356 lng: 77.52793291088771 is 560082
+[INFO] 2019-04-30 10:16:57,677 applicationLogger apply - Zip code for lat: 12.80219101303356 lng: 77.52793291088771 is 560082
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.809065806222913 lng: 77.44738742377815
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.809065806222913 lng: 77.44738742377815
+[INFO] 2019-04-30 10:16:57,677 applicationLogger lookupZipCode - Looking up zip code for lat: 12.809065806222913 lng: 77.44738742377815
+[INFO] 2019-04-30 10:16:57,678 applicationLogger apply - Zip code for lat: 12.809065806222913 lng: 77.44738742377815 is 560082
+[INFO] 2019-04-30 10:16:57,678 applicationLogger apply - Zip code for lat: 12.809065806222913 lng: 77.44738742377815 is 560082
+[INFO] 2019-04-30 10:16:57,678 applicationLogger apply - Zip code for lat: 12.809065806222913 lng: 77.44738742377815 is 560082
+[INFO] 2019-04-30 10:16:57,678 applicationLogger lookupZipCode - Looking up zip code for lat: 13.041449889287598 lng: 77.5639838877463
+[INFO] 2019-04-30 10:16:57,678 applicationLogger lookupZipCode - Looking up zip code for lat: 13.041449889287598 lng: 77.5639838877463
+[INFO] 2019-04-30 10:16:57,678 applicationLogger lookupZipCode - Looking up zip code for lat: 13.041449889287598 lng: 77.5639838877463
+[INFO] 2019-04-30 10:16:57,679 applicationLogger apply - Zip code for lat: 13.041449889287598 lng: 77.5639838877463 is 560094
+[INFO] 2019-04-30 10:16:57,679 applicationLogger apply - Zip code for lat: 13.041449889287598 lng: 77.5639838877463 is 560094
+[INFO] 2019-04-30 10:16:57,679 applicationLogger apply - Zip code for lat: 13.041449889287598 lng: 77.5639838877463 is 560094
+[INFO] 2019-04-30 10:16:57,680 applicationLogger lookupZipCode - Looking up zip code for lat: 13.04142227429069 lng: 77.54951787282958
+[INFO] 2019-04-30 10:16:57,680 applicationLogger lookupZipCode - Looking up zip code for lat: 13.04142227429069 lng: 77.54951787282958
+[INFO] 2019-04-30 10:16:57,680 applicationLogger lookupZipCode - Looking up zip code for lat: 13.04142227429069 lng: 77.54951787282958
+[INFO] 2019-04-30 10:16:57,680 applicationLogger apply - Zip code for lat: 13.04142227429069 lng: 77.54951787282958 is 560022
+[INFO] 2019-04-30 10:16:57,680 applicationLogger apply - Zip code for lat: 13.04142227429069 lng: 77.54951787282958 is 560022
+[INFO] 2019-04-30 10:16:57,680 applicationLogger apply - Zip code for lat: 13.04142227429069 lng: 77.54951787282958 is 560022
+[INFO] 2019-04-30 10:29:30,335 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560082
+[INFO] 2019-04-30 10:29:30,335 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560082
+[INFO] 2019-04-30 10:29:31,803 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560099
+[INFO] 2019-04-30 10:29:31,803 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560099
+[INFO] 2019-04-30 10:41:51,444 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560082
+[INFO] 2019-04-30 10:41:51,444 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560082
+[INFO] 2019-04-30 10:41:52,501 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560099
+[INFO] 2019-04-30 10:41:52,501 applicationLogger findSurgeRatio - Calculating surge ratio for zipcode: 560099
