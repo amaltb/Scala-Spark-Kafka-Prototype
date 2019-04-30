@@ -8,12 +8,15 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
 
 import scala.io.Source
 
+/**
+  * Utility object wrapping all the application utility methods.
+  */
 object ConsumerUtils {
 
   private val log = LogFactory.getLogger("./log/consumer.log", Level.DEBUG)
 
   /**
-    * Utility method to parse required and optional command line arguments...
+    * method to parse required and optional command line arguments.
     *
     * @param args
     * @param reqArgs
@@ -84,7 +87,7 @@ object ConsumerUtils {
     */
   def subscribeKafkaStream(spark: SparkSession, KafkaParams: Map[String, String], topic: String): DataFrame = {
     try {
-      val df = spark.read
+      val df = spark.readStream
         .format("kafka")
         .options(KafkaParams)
         .option("failOnDataLoss", "false")
@@ -128,7 +131,7 @@ object ConsumerUtils {
   }
 
   /**
-    * function to create zip code lookup map, from geo code csv file.
+    * method to create zip code lookup map, from geo code csv file.
     *
     * @return
     */

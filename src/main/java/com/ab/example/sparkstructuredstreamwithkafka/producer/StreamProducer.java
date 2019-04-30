@@ -15,6 +15,9 @@ import java.util.Properties;
 
 import static com.ab.example.sparkstructuredstreamwithkafka.producer.util.ApplicationUtil.sendToKafkaTopic;
 
+/**
+ * Class implementing runnable interface to create a thread generating random demand requests to kafka in every second.
+ */
 class CarDemandThread implements Runnable {
 
     private static final Logger LOGGER = LogFactory.getLogger(Level.DEBUG);
@@ -38,7 +41,7 @@ class CarDemandThread implements Runnable {
 
 
                 sendToKafkaTopic(producer, key, msgToSend, kafkaTopic);
-                Thread.sleep(2000);
+                Thread.sleep(1000);
 
                 if (Thread.interrupted()) {
                     producer.close();
@@ -54,7 +57,10 @@ class CarDemandThread implements Runnable {
     }
 }
 
-
+/**
+ * Class implementing runnable interface to create a thread generating random supply requests to kafka in every second.
+ *
+ */
 class CarSupplyThread implements Runnable {
 
     private static final Logger LOGGER = LogFactory.getLogger(Level.DEBUG);
@@ -77,7 +83,7 @@ class CarSupplyThread implements Runnable {
 
 
                 sendToKafkaTopic(producer, key, msgToSend, kafkaTopic);
-                Thread.sleep(2000);
+                Thread.sleep(1000);
 
                 if (Thread.interrupted()) {
                     producer.close();
@@ -93,10 +99,18 @@ class CarSupplyThread implements Runnable {
     }
 }
 
+/**
+ * StreamProducer application generates supply & demand requests to kafka
+ */
 public class StreamProducer {
 
     private static final Logger LOGGER = LogFactory.getLogger(Level.DEBUG);
 
+    /**
+     * application run method.
+     *
+     * @param args
+     */
     private static void run(String[] args) {
         LOGGER.info("Starting application... running stream producer...");
         final Properties props = new Properties();
@@ -124,6 +138,11 @@ public class StreamProducer {
         }
     }
 
+    /**
+     * entry point to the application.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         if (args.length < 1) {
             LOGGER.error("StreamProducer is expecting following arguments\n" +
