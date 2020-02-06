@@ -115,7 +115,7 @@ object ConsumerUtils {
     log.info("Persisting intermediary dataframe to kafka... ")
 
     try{
-      df.selectExpr("CAST(value AS STRING)")
+      df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
         .writeStream
         .format("kafka")
         .trigger(Trigger.ProcessingTime("10 seconds"))

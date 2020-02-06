@@ -17,10 +17,7 @@ public class ApplicationUtil {
                 .nextDouble(Constants.GEO_LOC_START_LONG, Constants.GEO_LOC_END_LONG);
         int carId = ThreadLocalRandom.current().nextInt(1, 101);
 
-        final StringBuilder builder = new StringBuilder();
-        builder.append(carId).append(",").append(randomLatValue).append(",").append(randomLongValue);
-
-        return builder.toString();
+        return String.valueOf(carId) + "," + randomLatValue + "," + randomLongValue;
     }
 
     public static String generateCarDemandMessage() {
@@ -31,22 +28,7 @@ public class ApplicationUtil {
                 .nextDouble(Constants.GEO_LOC_START_LONG, Constants.GEO_LOC_END_LONG);
         int customerId = ThreadLocalRandom.current().nextInt(1, 1001);
 
-        final StringBuilder builder = new StringBuilder();
-        builder.append(customerId).append(",").append(randomLatValue).append(",").append(randomLongValue);
-
-        return builder.toString();
-    }
-
-
-    public static String getKafkaSerializer(String cls) {
-        switch (cls.toLowerCase(Locale.ENGLISH)) {
-            case "string":
-                return "org.apache.kafka.common.serialization.StringSerializer";
-            case "integer":
-                return "org.apache.kafka.common.serialization.IntegerSerializer";
-            default:
-                throw new RuntimeException("Unable to find a valid kafka serializer for given class...");
-        }
+        return String.valueOf(customerId) + "," + randomLatValue + "," + randomLongValue;
     }
 
     public static void sendToKafkaTopic(Producer prod, String key, String value, String topic) {

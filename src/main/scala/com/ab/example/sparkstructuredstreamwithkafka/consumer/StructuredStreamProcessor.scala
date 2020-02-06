@@ -62,6 +62,13 @@ object StructuredStreamProcessor {
     val column_udf = spark.udf.register("jsonifier", jsonifier)
 
     df.withColumn("value", column_udf(array(columnNames.head, columnNames.tail: _*)))
+
+    /*
+      Setting zip_code as the key column so that kafka producer uses hash-partition instead round-robin. This should
+      help to have entries from one zip code to be eventually go to one rdd partition hence reduce shuffling while
+      computing the surge ratio.
+     */
+    df.withColumn("key", df.col("zip_code"))
   }
 
   /** This method does
