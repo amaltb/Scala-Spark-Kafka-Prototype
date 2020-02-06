@@ -1,9 +1,7 @@
 package com.ab.example.sparkstructuredstreamwithkafka.producer;
 
-import com.ab.example.sparkstructuredstreamwithkafka.producer.util.ApplicationUtil;
-import com.ab.example.sparkstructuredstreamwithkafka.producer.util.Constants;
-import com.ab.example.sparkstructuredstreamwithkafka.producer.util.LogFactory;
-import com.ab.example.sparkstructuredstreamwithkafka.producer.util.ObjectFactory;
+import com.ab.example.sparkstructuredstreamwithkafka.producer.util.*;
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -12,50 +10,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import static com.ab.example.sparkstructuredstreamwithkafka.producer.util.ApplicationUtil.sendToKafkaTopic;
-
-/**
- * Class implementing runnable interface to create a thread generating random demand requests to kafka in every second.
- */
-class CarDemandThread implements Runnable {
-
-    private static final Logger LOGGER = LogFactory.getLogger(Level.DEBUG);
-
-    private Properties kafkaParams;
-    private String kafkaTopic;
-
-    CarDemandThread(Properties kafkaParams, String kafkaTopic) {
-        this.kafkaParams = kafkaParams;
-        this.kafkaTopic = kafkaTopic;
-    }
-
-    @Override
-    public void run() {
-        try {
-            final Producer producer = ObjectFactory.getORCreateKafkaProducer(kafkaParams, String.class, String.class);
-
-            while (true) {
-                String msgToSend = ApplicationUtil.generateCarDemandMessage();
-                String key = new Timestamp(System.currentTimeMillis()).toString();
-
-
-                sendToKafkaTopic(producer, key, msgToSend, kafkaTopic);
-                Thread.sleep(1000);
-
-                if (Thread.interrupted()) {
-                    producer.close();
-                    LOGGER.info("Stopping car supply generator due to interrupt...");
-                    break;
-                }
-            }
-        } catch (RuntimeException e) {
-            LOGGER.error(String.format("Failed to send message to kafka topic %s. \nDetails :%s", kafkaTopic, e));
-        } catch (InterruptedException e) {
-            LOGGER.debug("Interrupted while sleeping...");
-        }
-    }
-}
 
 /**
  * Class implementing runnable interface to create a thread generating random supply requests to kafka in every second.
@@ -76,7 +35,7 @@ class CarSupplyThread implements Runnable {
     @Override
     public void run() {
         try {
-            final Producer producer = ObjectFactory.getORCreateKafkaProducer(kafkaParams, String.class, String.class);
+            final Producer producer = SurgeKafkaProducer.getKafkaProducer(kafkaParams);
             while (true) {
                 String msgToSend = ApplicationUtil.generateCarSupplyMessage();
                 String key = new Timestamp(System.currentTimeMillis()).toString();
@@ -120,22 +79,26 @@ public class StreamProducer {
             LOGGER.error("Could not load kafka parameters.. Check kafka parameters file. \nDetails: " + e);
         }
 
-        Thread t1 = new Thread(new CarDemandThread(props, Constants.DEMAND_TOPIC));
-        Thread t2 = new Thread(new CarSupplyThread(props, Constants.SUPPLY_TOPIC));
+        final KafkaProducer<String, Request> producer = SurgeKafkaProducer.getKafkaProducer(props);
+        final ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        try {
-            t1.start();
-            t2.start();
+        executorService.submit(new RequestSender(producer, Constants.DEMAND_TOPIC));
+        executorService.submit(new RequestSender(producer, Constants.SUPPLY_TOPIC));
 
-            t1.join();
-            t2.join();
-        } catch (Exception e) {
-            LOGGER.error("Terminating execution due to exception. \nDetails: " + e);
-        } finally {
-            t1.interrupt();
-            t2.interrupt();
-            ObjectFactory.closeKafkaProducers();
-        }
+        // Run Metrics Producer Reporter which is runnable passing it the producer.
+        executorService.submit(new MetricsProducerReporter(producer));
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            executorService.shutdown();
+            try {
+                executorService.awaitTermination(200, TimeUnit.MILLISECONDS);
+                LOGGER.info("Flushing and closing the producer");
+                producer.flush();
+                producer.close(10_000, TimeUnit.MILLISECONDS);
+            } catch (InterruptedException e) {
+                LOGGER.warn("Shutting down executor service", e);
+            }
+        }));
     }
 
     /**
