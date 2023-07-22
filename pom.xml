@@ -13,7 +13,7 @@
         <project.scala.maintenance.version>4</project.scala.maintenance.version>
         <project.scala-library.version>${project.scala.major.minor.version}.${project.scala.maintenance.version}</project.scala-library.version>
         <project.scalatest.version>3.0.3</project.scalatest.version>
-        <project.spark.version>2.3.0</project.spark.version>
+        <project.spark.version>2.4.8</project.spark.version>
         <scalatest-maven-plugin.version>1.0</scalatest-maven-plugin.version>
     </properties>
 
